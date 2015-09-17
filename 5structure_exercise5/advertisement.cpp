@@ -123,3 +123,13 @@ bool Advertisement::operator==(const Advertisement &a) const
 	if ( a.getNumber() == this->number ) return true;
 	else return false;
 }
+
+priority_queue<Bid>& Advertisement::getBids(void)
+{
+	return bids;
+}
+
+vector<Bid> Advertisement::getTopDutchBids (void) const
+{
+
+}
