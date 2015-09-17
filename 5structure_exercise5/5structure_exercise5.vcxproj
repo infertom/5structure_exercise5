@@ -54,6 +54,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -74,6 +75,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Advertisement.h" />
+    <ClInclude Include="Bid.h" />
+    <ClInclude Include="bidhistory.h" />
+    <ClInclude Include="buildbidpage.h" />
+    <ClInclude Include="buildpage.h" />
+    <ClInclude Include="Categories.h" />
+    <ClInclude Include="Category.h" />
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="Date.h" />
+    <ClInclude Include="Group.h" />
+    <ClInclude Include="Listing.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="processrequest.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="advertisement.cpp" />
+    <ClCompile Include="bid.cpp" />
+    <ClCompile Include="buildbidpage.cpp" />
+    <ClCompile Include="buildpage.cpp" />
+    <ClCompile Include="categories.cpp" />
+    <ClCompile Include="category.cpp" />
+    <ClCompile Include="client.cpp" />
+    <ClCompile Include="date.cpp" />
+    <ClCompile Include="group.cpp" />
+    <ClCompile Include="listing.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="processrequest.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -14,4 +14,83 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Advertisement.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Bid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bidhistory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="buildbidpage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="buildpage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Categories.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Category.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Date.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Group.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Listing.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="processrequest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="advertisement.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="buildbidpage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="buildpage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="categories.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="category.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="client.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="date.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="group.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="listing.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="processrequest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="bid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

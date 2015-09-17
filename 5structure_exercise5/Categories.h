@@ -21,8 +21,8 @@ class Categories {
 	Container objects;
 
   public:
-	static const int TOP_LEVEL;
-	static const int NO_PARENT;
+	static const int TOP_LEVEL = 3;
+	static const int NO_PARENT = 1;
     
 	virtual Category* operator[](const int& number);
 	virtual void add(Category* ptr);
