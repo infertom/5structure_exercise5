@@ -1,22 +1,55 @@
-﻿生成启动时间为 2015/9/18 11:26:28。
+﻿生成启动时间为 2015/9/18 20:56:34。
      1>项目“C:\Users\Infertom-PC\Documents\Visual Studio 2010\Projects\5structure_exercise5\5structure_exercise5\5structure_exercise5.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在对“Debug\5structure_exercise5.unsuccessfulbuild”执行 Touch 任务。
        ClCompile:
-         D:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt buildbidpage.cpp buildpage.cpp client.cpp group.cpp main.cpp processrequest.cpp
-         processrequest.cpp
-     1>c:\users\infertom-pc\documents\visual studio 2010\projects\5structure_exercise5\5structure_exercise5\processrequest.cpp(17): fatal error C1083: 无法打开包括文件:“CopyByKeyword.h”: No such file or directory
-         client.cpp
+         D:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt bidhistory.cpp buildbidpage.cpp
+         bidhistory.cpp
          正在生成代码...
          正在编译...
-         main.cpp
-         group.cpp
-         buildpage.cpp
          buildbidpage.cpp
          正在生成代码...
-     1>c:\users\infertom-pc\documents\visual studio 2010\projects\5structure_exercise5\5structure_exercise5\group.cpp(8): warning C4715: “Group::operator[]”: 不是所有的控件路径都返回值
-     1>已完成生成项目“C:\Users\Infertom-PC\Documents\Visual Studio 2010\Projects\5structure_exercise5\5structure_exercise5\5structure_exercise5.vcxproj”(build 个目标)的操作 - 失败。
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\5structure_exercise5.exe.embed.manifest.res" Debug\5structure_exercise5_manifest.rc 
+       Link:
+         D:\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Infertom-PC\Documents\Visual Studio 2010\Projects\5structure_exercise5\Debug\5structure_exercise5.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\5structure_exercise5.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Infertom-PC\Documents\Visual Studio 2010\Projects\5structure_exercise5\Debug\5structure_exercise5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Infertom-PC\Documents\Visual Studio 2010\Projects\5structure_exercise5\Debug\5structure_exercise5.lib" /MACHINE:X86 Debug\5structure_exercise5.exe.embed.manifest.res
+         Debug\advertisement.obj
+         Debug\bid.obj
+         Debug\bidhistory.obj
+         Debug\buildbidpage.obj
+         Debug\buildpage.obj
+         Debug\categories.obj
+         Debug\category.obj
+         Debug\client.obj
+         Debug\date.obj
+         Debug\group.obj
+         Debug\listing.obj
+         Debug\main.obj
+         Debug\processrequest.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\5structure_exercise5.exe.embed.manifest" /manifest Debug\5structure_exercise5.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\5structure_exercise5.exe.embed.manifest.res" Debug\5structure_exercise5_manifest.rc 
+       LinkEmbedManifest:
+         D:\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Infertom-PC\Documents\Visual Studio 2010\Projects\5structure_exercise5\Debug\5structure_exercise5.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\5structure_exercise5.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Infertom-PC\Documents\Visual Studio 2010\Projects\5structure_exercise5\Debug\5structure_exercise5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Infertom-PC\Documents\Visual Studio 2010\Projects\5structure_exercise5\Debug\5structure_exercise5.lib" /MACHINE:X86 Debug\5structure_exercise5.exe.embed.manifest.res
+         Debug\advertisement.obj
+         Debug\bid.obj
+         Debug\bidhistory.obj
+         Debug\buildbidpage.obj
+         Debug\buildpage.obj
+         Debug\categories.obj
+         Debug\category.obj
+         Debug\client.obj
+         Debug\date.obj
+         Debug\group.obj
+         Debug\listing.obj
+         Debug\main.obj
+         Debug\processrequest.obj
+         5structure_exercise5.vcxproj -> C:\Users\Infertom-PC\Documents\Visual Studio 2010\Projects\5structure_exercise5\Debug\5structure_exercise5.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\5structure_exercise5.unsuccessfulbuild”。
+         正在对“Debug\5structure_exercise5.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“C:\Users\Infertom-PC\Documents\Visual Studio 2010\Projects\5structure_exercise5\5structure_exercise5\5structure_exercise5.vcxproj”(build 个目标)的操作。
 
-生成失败。
+生成成功。
 
-已用时间 00:00:09.61
+已用时间 00:00:06.92

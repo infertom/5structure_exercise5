@@ -92,6 +92,7 @@
   <ItemGroup>
     <ClCompile Include="advertisement.cpp" />
     <ClCompile Include="bid.cpp" />
+    <ClCompile Include="bidhistory.cpp" />
     <ClCompile Include="buildbidpage.cpp" />
     <ClCompile Include="buildpage.cpp" />
     <ClCompile Include="categories.cpp" />

@@ -2,6 +2,7 @@
 #define BIDHISTORY_H
 
 #include <sstream>
+#include "Advertisement.h"
 
 using namespace std;
 
