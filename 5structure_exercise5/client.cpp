@@ -81,3 +81,32 @@ bool Client::verifyPasswd(string passwd)
     if ( passwd == this->passwd ) return true;
     else return false;
 }
+
+vector<int>::iterator Client::beginOfferings()
+{
+	return offerings.begin();
+}
+
+vector<int>::iterator Client::endOfferings()
+{
+	return offerings.end();
+}
+
+vector<int>::iterator Client::beginBids()
+{
+	return bids.begin();
+}
+
+vector<int>::iterator Client::endBids()
+{
+	return bids.end();
+}
+
+void Client::addBid (int item)
+{
+	bids.push_back(item);
+}
+void Client::addOffering (int item)
+{
+	offerings.push_back(item);
+}

@@ -1,15 +1,22 @@
-﻿生成启动时间为 2015/9/18 11:20:16。
+﻿生成启动时间为 2015/9/18 11:26:28。
      1>项目“C:\Users\Infertom-PC\Documents\Visual Studio 2010\Projects\5structure_exercise5\5structure_exercise5\5structure_exercise5.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在对“Debug\5structure_exercise5.unsuccessfulbuild”执行 Touch 任务。
        ClCompile:
-         D:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt advertisement.cpp processrequest.cpp
+         D:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt buildbidpage.cpp buildpage.cpp client.cpp group.cpp main.cpp processrequest.cpp
          processrequest.cpp
      1>c:\users\infertom-pc\documents\visual studio 2010\projects\5structure_exercise5\5structure_exercise5\processrequest.cpp(17): fatal error C1083: 无法打开包括文件:“CopyByKeyword.h”: No such file or directory
-         advertisement.cpp
+         client.cpp
          正在生成代码...
+         正在编译...
+         main.cpp
+         group.cpp
+         buildpage.cpp
+         buildbidpage.cpp
+         正在生成代码...
+     1>c:\users\infertom-pc\documents\visual studio 2010\projects\5structure_exercise5\5structure_exercise5\group.cpp(8): warning C4715: “Group::operator[]”: 不是所有的控件路径都返回值
      1>已完成生成项目“C:\Users\Infertom-PC\Documents\Visual Studio 2010\Projects\5structure_exercise5\5structure_exercise5\5structure_exercise5.vcxproj”(build 个目标)的操作 - 失败。
 
 生成失败。
 
-已用时间 00:00:03.21
+已用时间 00:00:09.61
