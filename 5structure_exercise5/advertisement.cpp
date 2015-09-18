@@ -129,7 +129,25 @@ priority_queue<Bid>& Advertisement::getBids(void)
 	return bids;
 }
 
+vector<Bid> tempBidVector;
 vector<Bid> Advertisement::getTopDutchBids (void) const
 {
+	tempBidVector.clear();
+	int sumQuantity = 0;
+	priority_queue<Bid> tempBids = this->bids;
+	Bid tempBid;
 
+	while ( !tempBids.empty() && sumQuantity < quantity )
+	{
+		tempBid = tempBids.top();
+		tempBids.pop();
+		sumQuantity += tempBid.getQuantity();
+
+		if ( sumQuantity <= quantity ) {
+			tempBidVector.push_back(tempBid);
+		}
+		else break;
+	}
+
+	return tempBidVector;
 }
