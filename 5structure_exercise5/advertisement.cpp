@@ -1,8 +1,9 @@
 #include "Advertisement.h"
+#include <cstring>
 
 istream &operator>>(istream &stream, Advertisement &a)
 {
-	string str;
+	string str, temp;
 	int q;
 	Date d;
 	stream>>str;
@@ -15,7 +16,8 @@ istream &operator>>(istream &stream, Advertisement &a)
 	a.setStart(d);
 	stream>>d;
 	a.setClose(d);
-	stream>>str;
+	str = "";
+	while ( stream >> temp && temp != "" ) str = str + temp + " ";
 	a.setBody(str);
 
 	return stream;
@@ -120,8 +122,7 @@ int Advertisement::getQuantity() const
 
 bool Advertisement::operator==(const Advertisement &a) const
 {
-	if ( a.getNumber() == this->number ) return true;
-	else return false;
+	return (a.getNumber() == number);
 }
 
 priority_queue<Bid>& Advertisement::getBids(void)
@@ -129,25 +130,89 @@ priority_queue<Bid>& Advertisement::getBids(void)
 	return bids;
 }
 
-vector<Bid> tempBidVector;
-vector<Bid> Advertisement::getTopDutchBids (void) const
-{
-	tempBidVector.clear();
-	int sumQuantity = 0;
-	priority_queue<Bid> tempBids = this->bids;
-	Bid tempBid;
+/************************************************************************/
+/* getTopDutchBids                                                                     */
+/************************************************************************/
 
-	while ( !tempBids.empty() && sumQuantity < quantity )
+vector<Bid> ansBidVector;
+Bid tempBid;
+priority_queue<Bid> tempBids;
+int tempQuantity;
+
+//基于优先级队列
+void fun_1()
+{
+	int sumQuantity = 0;
+
+	while ( !tempBids.empty() && sumQuantity < tempQuantity )
 	{
 		tempBid = tempBids.top();
 		tempBids.pop();
 		sumQuantity += tempBid.getQuantity();
 
-		if ( sumQuantity <= quantity ) {
-			tempBidVector.push_back(tempBid);
+		if ( sumQuantity <= tempQuantity ) {
+			ansBidVector.push_back(tempBid);
 		}
-		else break;
+		else sumQuantity -= tempBid.getQuantity();
+	}
+}
+
+
+const int MAXN = 1000 + 10;
+double bag[MAXN];
+int vis[MAXN][MAXN];
+Bid t[MAXN];
+//基于背包算法
+void fun_2()
+{
+	int n = 1;
+	memset(bag, 0, sizeof bag);
+	memset(vis, -1, sizeof vis);
+
+	while ( !tempBids.empty() )
+	{
+		tempBid = tempBids.top();
+		tempBids.pop();
+		int k = tempBid.getQuantity();
+		for (int i = tempQuantity; i; i--){
+			if ( i >= k && bag[i] < bag[i-k] + tempBid.getAmount() ){
+				bag[i] = bag[i-k] + tempBid.getAmount();
+				vis[n][i] = n;
+			}
+			else vis[n][i] = vis[n-1][i];
+			//printf("(%d %d)%d  ", n, i, vis[n][i]);
+		}
+		cout<<endl;
+		t[n++] = tempBid;
 	}
 
-	return tempBidVector;
+	n--;
+	while ( tempQuantity && ~vis[n][tempQuantity] )
+	{
+		tempBid = t[vis[n][tempQuantity]];
+		n = vis[n][tempQuantity] - 1;
+		tempQuantity -= tempBid.getQuantity();
+		ansBidVector.insert(ansBidVector.begin(), tempBid);
+	}
+}
+/*
+5
+110 4
+100 2
+70 1
+60 1
+*/
+
+vector<Bid> Advertisement::getTopDutchBids (void) const
+{
+	ansBidVector.clear();
+	tempBids = this->bids;
+	tempQuantity = quantity;
+
+	//基于优先级队列
+	//fun_1();
+	//基于背包算法
+	fun_2();
+
+	return ansBidVector;
 }

@@ -2,8 +2,11 @@
 
 Advertisement * Listing::operator[](const int &number)
 {
-	iterator it = objects.begin() + number;
-	return *it;
+	for (iterator it = objects.begin(); it != objects.end(); it++){
+		if ( (*it)->getNumber() == number ) return (*it);
+	}
+	cerr<<"No advertisement"<<endl;
+	return NULL;
 }
 
 void Listing::add(Advertisement* ptr)
