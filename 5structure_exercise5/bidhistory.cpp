@@ -3,7 +3,7 @@
 
 void showBid(ostringstream &oss, Bid bid)
 {
-	oss << "Bid: $" << bid.getAmount() << "  Posted By: " << bid.getEmail() << "<br>" << endl;
+	oss << "Bid: $" << bid.getAmount() << " Quantity: " << bid.getQuantity() << "  Posted By: " << bid.getEmail() << "<br>" << endl;
 }
 
 void displayBidHistory(ostringstream &oss, Advertisement* ad)
@@ -21,7 +21,7 @@ void displayBidHistory(ostringstream &oss, Advertisement* ad)
 	oss << "Posted: " << ad->getStart() << "<br>" << endl;
 	oss << "Closes: " << ad->getClose() << "<br>" << endl;
 	oss << "Quantity: "	<< ad->getQuantity() << "<br>" << endl;
-	oss << "Number of bids: " << ad->getBids().size() << "<br>" << endl;
+	oss << "Number of wining bids: " << ad->getTopDutchBids().size() << "<br>" << endl;
 	
 	//show bids
 	int sumQuantity = ad->getQuantity();
